@@ -1,0 +1,28 @@
+name: 'uber_data'
+
+profile: 'default'  # This should match the profile name used in the DAG
+
+version: '1.0.0'
+
+config-version: 2
+
+models:
+  uber_data:
+    +schema: "dbt"  
+    +materialized: table
+    fact_table:
+      +materialized: table
+    passenger_count_dim:
+      +materialized: table
+    trip_distance_dim:
+      +materialized: table
+    rate_code_dim:
+      +materialized: table
+    datetime_dim:
+      +materialized: table
+    pickup_location_dim:
+      +materialized: table
+    dropoff_location_dim:
+      +materialized: table
+    payment_type_dim:
+      +materialized: table

@@ -1,0 +1,6 @@
+postgres:
+    port: "5438"
+project:
+    name: end-to-end-airflow-data-pipeline
+webserver:
+    port: "8084"

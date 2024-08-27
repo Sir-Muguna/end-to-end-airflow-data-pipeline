@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: uber_data
+    database: uber-data-project-433508 # Put the project id!
+
+    tables:
+      - name: raw_uberdata
