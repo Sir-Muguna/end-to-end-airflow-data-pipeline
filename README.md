@@ -156,6 +156,12 @@ To run this project, ensure you have the following installed:
 
 1. **Run dbt models**:
 
+```
+# install dbt into a virtual environment
+RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
+    pip install --no-cache-dir dbt-bigquery && deactivate
+```
+
    ```bash
    astro dev bash
    source /usr/local/airflow/dbt_venv/bin/activate
