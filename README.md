@@ -162,6 +162,8 @@ RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
     pip install --no-cache-dir dbt-bigquery && deactivate
 ```
 
+    Add the SQL dbt models
+
    ```bash
    astro dev bash
    source /usr/local/airflow/dbt_venv/bin/activate
