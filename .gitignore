@@ -14,5 +14,6 @@ target
 upgrade-test* 
 logs
 service_account.json
+gcp
 
 

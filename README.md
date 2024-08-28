@@ -3,6 +3,8 @@
 
 This repository contains an end-to-end data pipeline for processing and analyzing Uber trip data. The pipeline ingests raw data, transforms it using Apache Airflow, and loads it into BigQuery for further analysis. The project also includes data modeling with dbt and an interactive dashboard for data visualization.
 
+![MetaData](./images/end-to-end-airflow.png)
+
 ## Dataset
 
 The dataset used in this project describes yellow taxi trip data in New York City. You can download the dataset from the following link:
@@ -11,7 +13,7 @@ The dataset used in this project describes yellow taxi trip data in New York Cit
 
 For additional data dictionaries or a map of the TLC Taxi Zones, please visit the [NYC TLC website](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
 
-![Metadata Sheet](https://prod-files-secure.s3.us-west-2.amazonaws.com/643670b4-0bcd-452a-972d-23fbfabbb50b/54d9b778-3da1-4d99-895c-481add482962/metadata_sheet.png)
+![MetaData](./images/metadata_sheet.png)
 
 ## Pipeline
 
@@ -22,8 +24,8 @@ The following image illustrates the end-to-end pipeline built with Apache Airflo
 ## Data Modeling
 
 The data model for the project includes various fact and dimension tables created using dbt:
+![MetaData](./images/uber_data_model.png)
 
-![Data Model](https://prod-files-secure.s3.us-west-2.amazonaws.com/643670b4-0bcd-452a-972d-23fbfabbb50b/fadb3c03-ed1d-4515-8bcf-7e533aa32519/uber_data_model.png)
 
 ## Prerequisites
 
