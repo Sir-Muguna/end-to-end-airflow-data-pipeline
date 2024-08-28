@@ -3,8 +3,7 @@
 
 This repository contains an end-to-end data pipeline for processing and analyzing Uber trip data. The pipeline ingests raw data, transforms it using Apache Airflow, and loads it into BigQuery for further analysis. The project also includes data modeling with dbt and an interactive dashboard for data visualization.
 
-![MetaData](/root/projects/portfolio_projects/data_engineering/end-to-end-airflow-data-pipeline/include/images/end-to-end-airflow.png)
-
+![MetaData](./include/images/end-to-end-airflow.png)
 
 ## Dataset
 
