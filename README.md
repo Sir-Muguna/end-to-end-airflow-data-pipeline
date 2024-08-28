@@ -218,8 +218,15 @@ RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
 
    ```bash
    astro dev bash
-   airflow tasks list uber_data
-   airflow tasks test uber_data transform.fact_table_run 2024-01-01
+    airflow tasks list uber_data
+    airflow tasks test uber_data transform.fact_table_run 2024-01-01
+    airflow tasks test uber_data transform.droff_location_dim_run 2024-01-01
+    airflow tasks test uber_data transform.datetime_dim_run 2024-01-01
+    airflow tasks test uber_data transform.passenger_count_dim_run 2024-01-01
+    airflow tasks test uber_data transform.payment_type_dim_run 2024-01-01
+    airflow tasks test uber_data transform.pickup_location_dim_run 2024-01-01
+    airflow tasks test uber_data transform.rate_code_dim_run 2024-01-01
+    airflow tasks test uber_data transform.trip_distance_dim_run 2024-01-01
    ```
 
 5. **Run the pipeline**:
