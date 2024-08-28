@@ -13,18 +13,12 @@ The dataset used in this project describes yellow taxi trip data in New York Cit
 
 For additional data dictionaries or a map of the TLC Taxi Zones, please visit the [NYC TLC website](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
 
-![MetaData](./images/metadata_sheet.png)
-
-## Pipeline
-
-The following image illustrates the end-to-end pipeline built with Apache Airflow:
-
-![End-to-End Airflow Pipeline](https://prod-files-secure.s3.us-west-2.amazonaws.com/643670b4-0bcd-452a-972d-23fbfabbb50b/1556824c-957e-4794-972d-3e054817b2c9/end-to-end_airflow.png)
+![MetaData](./include/images/metadata_sheet.png)
 
 ## Data Modeling
 
 The data model for the project includes various fact and dimension tables created using dbt:
-![MetaData](./images/uber_data_model.png)
+![MetaData](./include/images/uber_data_model.png)
 
 
 ## Prerequisites
