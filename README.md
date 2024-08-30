@@ -172,6 +172,9 @@ RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
    cd include/dbt 
    dbt deps
    dbt run --profiles-dir /usr/local/airflow/include/dbt/
+   If there is an error after running dbt on google credentials, export the json key path,
+   export GOOGLE_APPLICATION_CREDENTIALS="/usr/local/airflow/include/gcp/service_account.json"
+
    ```
 
    Verify that the tables exist with data in BigQuery.
