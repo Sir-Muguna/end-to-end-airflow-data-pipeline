@@ -157,9 +157,19 @@ To run this project, ensure you have the following installed:
 1. **Run dbt models**:
 
 ```
+# add the following to the Dockerfile
 # install dbt into a virtual environment
 RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
     pip install --no-cache-dir dbt-bigquery && deactivate
+
+```
+```
+# add the following to the requirements.txt file
+#Astro Runtime includes the following pre-installed providers packages: https://docs.astronomer.io/astro/runtime-image-architecture#provider-packages
+astronomer-cosmos
+astronomer-cosmos[dbt-bigquery]
+protobuf
+apache-airflow-providers-google
 ```
 
 **Add the SQL dbt models.**
