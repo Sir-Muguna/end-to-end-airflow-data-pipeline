@@ -1,28 +1,31 @@
-with raw_data as (
+{{
+  config(
+    materialized='table'
+  )
+}}
 
-    select
-        cast(VendorID as integer) as VendorID,
-        cast(tpep_pickup_datetime as timestamp) as tpep_pickup_datetime,
-        cast(tpep_dropoff_datetime as timestamp) as tpep_dropoff_datetime,
-        cast(passenger_count as integer) as passenger_count,
-        cast(trip_distance as float64) as trip_distance,
-        cast(pickup_longitude as float64) as pickup_longitude,
-        cast(pickup_latitude as float64) as pickup_latitude,
-        cast(RatecodeID as integer) as RatecodeID,
-        cast(store_and_fwd_flag as string) as store_and_fwd_flag,
-        cast(dropoff_longitude as float64) as dropoff_longitude,
-        cast(dropoff_latitude as float64) as dropoff_latitude,
-        cast(payment_type as integer) as payment_type,
-        cast(fare_amount as float64) as fare_amount,
-        cast(extra as float64) as extra,
-        cast(mta_tax as float64) as mta_tax,
-        cast(tip_amount as float64) as tip_amount,
-        cast(tolls_amount as float64) as tolls_amount,
-        cast(improvement_surcharge as float64) as improvement_surcharge,
-        cast(total_amount as float64) as total_amount
-
-    from {{ source('uber_data', 'raw_uberdata') }}
-
+WITH cleaned_uber_data AS (
+  SELECT
+    CAST(VendorID AS INTEGER) AS VendorID,
+    CAST(tpep_pickup_datetime AS STRING) AS tpep_pickup_datetime,
+    CAST(tpep_dropoff_datetime AS STRING) AS tpep_dropoff_datetime,
+    CAST(passenger_count AS INTEGER) AS passenger_count,
+    CAST(trip_distance AS FLOAT64) AS trip_distance,
+    CAST(pickup_longitude AS FLOAT64) AS pickup_longitude,
+    CAST(pickup_latitude AS FLOAT64) AS pickup_latitude,
+    CAST(RatecodeID AS INTEGER) AS RatecodeID,
+    CAST(store_and_fwd_flag AS STRING) AS store_and_fwd_flag,
+    CAST(dropoff_longitude AS FLOAT64) AS dropoff_longitude,
+    CAST(dropoff_latitude AS FLOAT64) AS dropoff_latitude,
+    CAST(payment_type AS INTEGER) AS payment_type,
+    CAST(fare_amount AS FLOAT64) AS fare_amount,
+    CAST(extra AS FLOAT64) AS extra,
+    CAST(mta_tax AS FLOAT64) AS mta_tax,
+    CAST(tip_amount AS FLOAT64) AS tip_amount,
+    CAST(tolls_amount AS FLOAT64) AS tolls_amount,
+    CAST(improvement_surcharge AS FLOAT64) AS improvement_surcharge,
+    CAST(total_amount AS FLOAT64) AS total_amount
+  FROM {{ source('uber_data', 'raw_uberdata') }} AS r
 )
 
-select * from raw_data;
+SELECT * FROM cleaned_uber_data

@@ -249,4 +249,7 @@ apache-airflow-providers-google
 
 ## Dashboard
 
-An interactive dashboard will be created on Looker for data analysis.
+A simple interactive dashboard will be created on Looker for data analysis.
+
+![MetaData](./include/images/uber_dashboard.png)
+
