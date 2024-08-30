@@ -233,6 +233,7 @@ apache-airflow-providers-google
    astro dev bash
     airflow tasks list uber_data
     airflow tasks test uber_data transform.fact_table_run 2024-01-01
+    airflow tasks test uber_data transform.cleaned_uber_data_run 2024-01-01
     airflow tasks test uber_data transform.dropoff_location_dim_run 2024-01-01
     airflow tasks test uber_data transform.datetime_dim_run 2024-01-01
     airflow tasks test uber_data transform.passenger_count_dim_run 2024-01-01

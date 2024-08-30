@@ -12,6 +12,8 @@ models:
     +materialized: table
     fact_table:
       +materialized: table
+    cleaned_uber_data:
+      +materialized: table
     passenger_count_dim:
       +materialized: table
     trip_distance_dim:
